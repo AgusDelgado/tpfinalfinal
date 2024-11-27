@@ -122,12 +122,12 @@ public class Menu {
                 case 2:
                     System.out.println("Ingrese su nueva contraseña");
                     String password = scanner.nextLine();
-                    listaUsuarios.get(0).setPassword(password);
+                    listaUsuarios.get((listaUsuarios.indexOf(usuarioLogueado))).setPassword(password);
                     break;
                 case 3:
                     System.out.println("Ingrese su nuevo email");
                     String email = scanner.nextLine();
-                    listaUsuarios.get(0).setEmail(email);
+                    listaUsuarios.get((listaUsuarios.indexOf(usuarioLogueado))).setEmail(email);
                     break;
                 case 4:
                     System.out.println("Saliendo...");
@@ -139,6 +139,7 @@ public class Menu {
         } while (option != 4);
     }
     private void games(List<Games> listaJuegos) {
+
     }
 }
 

@@ -16,8 +16,8 @@ public class Main {
         listaUsuarios.add(new Users("user1", "password1", "user1@example.com"));
         listaJuegos.add(new Games("Game 1", Genre.ACTION, 1, "Publisher 1", 59.99, 4.5));
 
-        MenuLogin loguin = new MenuLogin();
-        Users usuarioLogeado = loguin.homeMenu(listaUsuarios);
+        MenuLogin login = new MenuLogin();
+        Users usuarioLogeado = login.homeMenu(listaUsuarios);
 
         Menu menu = new Menu();
         menu.mainMenu(listaUsuarios, listaJuegos, usuarioLogeado);
