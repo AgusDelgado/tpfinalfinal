@@ -42,4 +42,9 @@ public class Comments {
     public void setRatingUsers(Double ratingUsers) {
         this.ratingUsers = ratingUsers;
     }
+
 }
+
+
+//agarrar lista de comm en usuario, e ir a la lista de juego a cada juego a buscar el id en la lista de cometarios ym ostrarlos
+

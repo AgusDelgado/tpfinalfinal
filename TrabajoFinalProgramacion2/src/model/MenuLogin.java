@@ -10,6 +10,7 @@ public class MenuLogin {
     // menu de inicio
     public Users homeMenu(List<Users> listaUsuarios) {
 
+        Users usuarioLogeado;
         int option;
         Scanner scanner = new Scanner(System.in);
         do {
@@ -21,7 +22,12 @@ public class MenuLogin {
 
             switch (option) {
                 case 1:
-                    return login(listaUsuarios);
+                    usuarioLogeado = login(listaUsuarios);
+                    if (usuarioLogeado == null) {
+                        System.out.println("Usuario no encontrado");
+                        break;
+                    }
+                    return usuarioLogeado;
                 case 2:
                     register(listaUsuarios);
                     break;
@@ -34,8 +40,11 @@ public class MenuLogin {
             }
         } while (option != 3);
         return null;
+
+
     }
 
+    //Login de usuario
     public Users login(List<Users> listaUsuarios) {
         Scanner scanner = new Scanner(System.in);
 
@@ -69,14 +78,26 @@ public class MenuLogin {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese su mail");
-        String mail = scanner.nextLine();
+        String mail = scanner.nextLine(); // agregar que si o si sea con un @ y/o con un .com
         System.out.println("Ingrese su username");
         String username = scanner.nextLine();
-        System.out.println("Ingrese su contraseña");
+        System.out.println("Ingrese su contraseña"); // agregar que tenga al menos 8 caracteres
         String password = scanner.nextLine();
         Users user = new Users(username, password, mail);
         listaUsuarios.add(user);
         System.out.println("Usuario registrado con exito");
     }
-}
 
+    public void deleteAllUserData(List<Games> listaJuegos, Users usuarioLogeado) {
+        usuarioLogeado.getComments().forEach(comentario -> {
+            listaJuegos.forEach(juego -> {
+                juego.getComments().forEach(comentarioJuego -> {
+                    if (comentarioJuego.getCommentId() == comentario) {
+                        juego.getComments().remove(comentarioJuego);
+                    }
+                });
+            });
+        });
+    }
+
+}

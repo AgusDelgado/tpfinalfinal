@@ -1,9 +1,11 @@
 package model;
 
+import interfaces.ShowInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Games {
+public class Games implements ShowInfo {
     private static int idCounter = 1;
     private final int gameId;
     private String name;
@@ -12,7 +14,7 @@ public class Games {
     private String publisher;
     private List<Comments> comments;
     private double price;
-    private double overallRating;
+    private double overallRating; // esta informacion decidimos que seria un numero random entre 0 y 5
 
     public Games(String name, Genre genre, Integer developerId, String publisher, double price, double overallRating) {
         this.gameId = idCounter++;
@@ -89,4 +91,16 @@ public class Games {
         this.overallRating = overallRating;
     }
 
+    // metodos
+    @Override
+    public void showInfo() {
+        System.out.println("---------------Game---------------");
+        System.out.println("Game ID: " + gameId);
+        System.out.println("Name: " + name);
+        System.out.println("Genre: " + genre);
+        System.out.println("Developer ID: " + developerId);
+        System.out.println("Publisher: " + publisher);
+        System.out.println("Price: " + price);
+        System.out.println("Overall Rating: " + overallRating);
+    }
 }
