@@ -91,7 +91,6 @@ public class Games implements ShowInfo {
         this.overallRating = overallRating;
     }
 
-    // metodos
     @Override
     public void showInfo() {
         System.out.println("---------------Game---------------");

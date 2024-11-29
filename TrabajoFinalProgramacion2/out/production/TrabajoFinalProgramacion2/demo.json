@@ -1,1 +1,64 @@
-{"users":[{"username":"user1","password":"password1","email":"user1@example.com","userId":1,"favoriteGames":null,"comments":null},{"username":"developer","password":"devpass","email":"dev@example.com","userId":2,"favoriteGames":null,"comments":null},{"username":"admin","password":"adminpass","email":"admin@example.com","userId":3,"favoriteGames":null,"comments":null}],"games":[{"gameId":1,"name":"Game 1","genre":"ACTION","developerId":1,"publisher":"Publisher 1","comments":[],"price":59.99,"overallRating":4.5},{"gameId":2,"name":"Game 2","genre":"ADVENTURE","developerId":2,"publisher":"Publisher 2","comments":[],"price":49.99,"overallRating":4.0},{"gameId":3,"name":"Game 3","genre":"RPG","developerId":3,"publisher":"Publisher 3","comments":[],"price":39.99,"overallRating":3.5}]}
+{
+  "users": [
+    {
+      "username": "user1",
+      "password": "password1",
+      "email": "user1@example.com",
+      "userId": 99,
+      "favoriteGames": [],
+      "comments": []
+    }
+  ],
+  "games": [
+    {
+      "gameId": 99,
+      "name": "Game 1",
+      "genre": "ACTION",
+      "developerId": 1,
+      "publisher": "Publisher 1",
+      "comments": [],
+      "price": 59.99,
+      "overallRating": 4.5
+    },
+    {
+      "gameId": 100,
+      "name": "Game 2",
+      "genre": "ADVENTURE",
+      "developerId": 2,
+      "publisher": "Publisher 2",
+      "comments": [],
+      "price": 49.99,
+      "overallRating": 4.0
+    },
+    {
+      "gameId": 101,
+      "name": "Game 3",
+      "genre": "RPG",
+      "developerId": 3,
+      "publisher": "Publisher 3",
+      "comments": [],
+      "price": 39.99,
+      "overallRating": 3.5
+    }
+  ],
+  "admin": {
+    "username": "admin",
+    "password": "adminpass",
+    "email": "admin@example.com",
+    "userId": 101,
+    "favoriteGames": [],
+    "comments": []
+  },
+  "developers": [
+    {
+      "username": "developer",
+      "password": "devpass",
+      "email": "dev@example.com",
+      "userId": 100,
+      "favoriteGames": [],
+      "comments": [],
+      "company": "Developer Company",
+      "followers": 100
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 package utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import model.Administrator;
+import model.Developers;
 import model.Games;
 import model.Users;
 import com.google.gson.Gson;
@@ -12,9 +14,9 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class JsonUtil {
-    public static void saveData(List<Users> users, List<Games> games, String filePath) throws IOException {
+    public static void saveData(List<Users> users, List<Games> games, Administrator admin, List<Developers> developers, String filePath) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        DataWrapper dataWrapper = new DataWrapper(users, games);
+        DataWrapper dataWrapper = new DataWrapper(users, games, admin, developers);
         mapper.writeValue(new File(filePath), dataWrapper);
     }
 
