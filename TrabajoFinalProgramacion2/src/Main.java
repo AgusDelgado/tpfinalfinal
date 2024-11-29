@@ -69,7 +69,7 @@ public class Main {
             JsonUtil.saveData(listaUsuarios, listaJuegos, admin, listaDevelopers,filePath);
             System.out.println("Datos guardados en archivo JSON.");
         } catch (IOException e) {
-            System.out.println("No se pudo guardar el archivo JSON.");
+            System.out.println("No se pudo guardar el archivo JSON." );
         }
 
     }
